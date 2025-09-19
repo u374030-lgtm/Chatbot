@@ -1,1 +1,25 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>College FAQ Chatbot</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 30px; }
+        .container { max-width: 500px; margin: auto; }
+        input, button { padding: 10px; margin: 5px 0; width: 100%; }
+        .answer { margin-top: 20px; font-weight: bold; color: green; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>College FAQ Chatbot</h2>
+        <form method="POST">
+            <input type="text" name="question" placeholder="Ask your question..." required>
+            <button type="submit">Ask</button>
+        </form>
+        {% if answer %}
+        <div class="answer">Bot: {{ answer }}</div>
+        {% endif %}
+    </div>
+</body>
+</html>
